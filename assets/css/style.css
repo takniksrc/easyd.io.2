@@ -2422,3 +2422,15 @@ section {
   font-size: 13px;
   color: #012970;
 }
+
+/* Images shadow 3d look */
+.img-3d {
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3); /* Shadow to create depth */
+  transform: perspective(1000px) rotateY(10deg); /* Perspective and rotation */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
+}
+
+.img-3d:hover {
+  transform: perspective(1000px) rotateY(0deg); /* Reset rotation on hover */
+  box-shadow: 15px 15px 45px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+}
